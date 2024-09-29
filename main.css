@@ -1,6 +1,6 @@
 .a-canvas {
     height: 100%;
-    max-width: 640px;
+    max-width: calc(100vw* 2.4);
     }
 #arjsDebugUIContainer {
      display:none;
