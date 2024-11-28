@@ -84,7 +84,8 @@
       var aScene = document.querySelector("a-scene").components.screenshot.getCanvas("perspective");
 
       // ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight); // これだと300*150になった　横長
-      ctx.drawImage(aScene, 0, 0, video.videoWidth, video.videoHeight);
+      // ctx.drawImage(aScene, 0, 0, video.videoWidth, video.videoHeight);  // これだと拝啓白くなった
+      ctx.drawImage(video, 0, 0, video.offsetWidth, video.offsetHeight);
       return imageData = canvas.toDataURL("image/jpg");
     }
 
