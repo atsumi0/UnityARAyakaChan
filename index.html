@@ -19,11 +19,9 @@
   </head>
   <body>
     <a-scene embedded arjs vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
-        <a-entity light="type: directional; color: #fff; castShadow:true;"
-                  position="-10 10 10"></a-entity>
-                  <a-entity camera look-controls orbit-controls="target: 0 1.6 -0.5; maxPolarAngle:180; minDistance: 0.5; maxDistance: 200; initialPosition: 0 0 30"></a-entity>
+                  <a-entity camera></a-entity>
             <!-- 3Dモデル（gltfファイル） -->
-            <a-gltf-model id="model" src="AyakaChan.gltf" position="0 0 0" rotation="0 0 0" scale="9 8 8" animation-mixer></a-gltf-model>
+            <a-gltf-model id="model" src="AyakaChan.gltf" position="0 0 0" rotation="0 0 0" scale="8 8 8" animation-mixer></a-gltf-model>
         </a-scene>
         <div class="ui">
           <img id="snap">
