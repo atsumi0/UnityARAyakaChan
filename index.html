@@ -77,24 +77,14 @@
 
     //スナップショットを撮る
     function takeSnapshot(video) {
-        var resizedCanvas = document.createElement("canvas");
-        var resizedContext = resizedCanvas.getContext("2d");
-        var width = video.videoWidth;
-        var height = video.videoHeight;
-        var aScene = document.querySelector("a-scene").components.screenshot.getCanvas("perspective");
-
-        if (width && height) {
-            //videoのサイズをキャンバスにセット
-            resizedCanvas.width = width;
-            resizedCanvas.height = height;
-            //キャンバスにvideoをコピー
-            resizedContext.drawImage(video, 0, 0, width, height);
-            var scale = height / width;
-                var scaledWidth = height * scale;
-                var marginLeft = width - scaledWidth;
-                resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height);
-            return resizedCanvas.toDataURL('image/png');
-        }
+      var canvas = document.getElementById('canvas');
+      var ctx    = canvas.getContext('2d');
+      var width  = video.offsetWidth;
+      var height = video.offsetHeight;
+      canvas.setAttribute('width' , width);
+      canvas.setAttribute('height', height);
+      ctx.drawImage(video, 0, 0, width, height);
+      var imageData = canvas.toDataURL("image/jpg");
     }
 
     //-->
