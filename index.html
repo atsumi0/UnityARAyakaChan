@@ -81,9 +81,7 @@
       var ctx    = canvas.getContext('2d');
       var width  = video.offsetWidth;
       var height = video.offsetHeight;
-      canvas.setAttribute('width' , width);
-      canvas.setAttribute('height', height);
-      ctx.drawImage(video, 0, 0, width, height);
+      ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
       var imageData = canvas.toDataURL("image/jpg");
     }
 
