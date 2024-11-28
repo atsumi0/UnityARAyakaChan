@@ -24,7 +24,13 @@
             <!-- 3Dモデル（gltfファイル） -->
             <a-gltf-model id="model" src="AyakaChan.gltf" position="-8 -5 0" rotation="0 0 0" scale="8 8 8" animation-mixer></a-gltf-model>
         </a-scene>
-        <button id="screenshot-button">AA</button>
+        <div class="ui">
+          <img id="snap">
+          <button id="screenshot-button"></button>
+          <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+          <a href="" id="take-photo" title="Take Photo"><i class="material-icons">photo_camera</i></a>
+          <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled" target="_blank"><i class="material-icons">file_download</i></a>
+      </div>
   </body>
   <script>
     //glTFの表示が暗くなる問題に対処
