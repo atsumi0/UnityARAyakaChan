@@ -37,6 +37,24 @@
     //glTFの表示が暗くなる問題に対処
     document.querySelector("a-scene").renderer.gammaOutput=true;
 
+    // 初期化のために実行
+    onResize();
+    // リサイズイベント発生時に実行
+    window.addEventListener('resize', onResize);
+
+    function onResize() {
+      // サイズを取得
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+    
+      // レンダラーのサイズを調整する
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(width, height);
+    
+      // カメラのアスペクト比を正す
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    }
     var image = document.querySelector('#snap');
     var take_photo_btn = document.querySelector('#take-photo');
     var delete_photo_btn = document.querySelector('#delete-photo');
