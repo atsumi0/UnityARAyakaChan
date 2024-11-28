@@ -99,7 +99,7 @@
                 var scale = height / width;
                 var scaledWidth = height * scale;
                 var marginLeft = (width - scaledWidth) / 2;
-                resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height);
+                resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height * 1.2);
             }
             return resizedCanvas.toDataURL('image/png');
         }
