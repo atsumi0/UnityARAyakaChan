@@ -88,7 +88,7 @@
       var scale = height / width;
       var scaledWidth = height * scale;
       var marginLeft = (width - scaledWidth) / 2;
-      resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height * 1.5);
+      ctx.drawImage(aScene, marginLeft, 0, scaledWidth, height * 1.5);
       return imageData = canvas.toDataURL("image/jpg");
     }
 
