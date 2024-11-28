@@ -1,4 +1,7 @@
-
+body {
+    margin: 0;
+    overflow: hidden;
+  }
 .ui {
     position: absolute;
     z-index: 100;
