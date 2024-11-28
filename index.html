@@ -18,7 +18,7 @@
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <a-scene embedded arjs vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+    <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
         <a-entity light="type: directional; color: #fff; castShadow:true;"
                   position="0 0 0"></a-entity>
         <a-entity camera orbit-controls=" maxPolarAngle:180; minDistance: 0.1; maxDistance: 150; initialPosition: 0 0 3"></a-entity>
