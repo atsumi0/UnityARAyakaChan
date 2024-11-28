@@ -89,6 +89,10 @@
             resizedCanvas.height = height;
             //キャンバスにvideoをコピー
             resizedContext.drawImage(video, 0, 0, width, height);
+            var scale = height / width;
+                var scaledWidth = height * scale;
+                var marginLeft = width - scaledWidth;
+                resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height);
             return resizedCanvas.toDataURL('image/png');
         }
     }
