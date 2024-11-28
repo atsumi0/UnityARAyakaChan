@@ -98,8 +98,8 @@
                 // 縦長（スマホ）
                 var scale = height / width;
                 var scaledWidth = height * scale * 1.5;
-                // var marginLeft = (width - scaledWidth) / 2;
-                resizedContext.drawImage(aScene, 0, 0, scaledWidth, height);
+                var marginLeft = (width - scaledWidth) / 2;
+                resizedContext.drawImage(aScene, marginLeft, 0, scaledWidth, height);
             }
             return resizedCanvas.toDataURL('image/png');
         }
